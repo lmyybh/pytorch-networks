@@ -1,0 +1,5 @@
+**/.ipynb_checkpoints/
+**/data/
+**/*.pth
+**/pth/
+**/__pycache__/
