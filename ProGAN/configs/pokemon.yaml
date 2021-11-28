@@ -1,0 +1,31 @@
+task:
+    name: pokemon
+    id: '003'
+
+net:
+    z_dim: 512
+    max_channels: 512
+    max_size: 64
+    preG_path: null
+    preD_path: null
+
+dataset:
+    name: 'PokemonDataset'
+    data_dir: '/data1/cgl/dataset/pokemon_mugshot'
+    num_dataset: null # null means all
+    noise_mean: 0
+    noise_std: 1
+    fixed_z_path: null
+    
+train:
+    device: 'cuda:0'
+    lr: 0.001
+    batch_n: 3
+    epoches: 100
+    current_step: 0
+    current_epoch: 0
+    save_every_epoches: 10
+    
+output:
+    output_dir: '/data1/cgl/tasks'
+

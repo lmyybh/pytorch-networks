@@ -1,0 +1,31 @@
+task:
+    name: dog
+    id: '002'
+
+net:
+    z_dim: 512
+    max_channels: 512
+    max_size: 64
+    preG_path: '/data1/cgl/tasks/dog_002/trained_models/20211105_213848_models/G_step0_epoch16.pth'
+    preD_path: '/data1/cgl/tasks/dog_002/trained_models/20211105_213848_models/D_step0_epoch16.pth'
+
+dataset:
+    name: 'DogDataset'
+    data_dir: '/data1/cgl/dataset/generative-dog-images/square_crop_dogs'
+    num_dataset: 20000
+    noise_mean: 0
+    noise_std: 1
+    fixed_z_path: '/data1/cgl/tasks/dog_002/trained_models/20211105_213848_models/fixed_z.pth'
+    
+train:
+    device: 'cuda:0'
+    lr: 0.001
+    batch_n: 4
+    epoches: 100
+    current_step: 0
+    current_epoch: 16
+    save_every_epoches: 10
+    
+output:
+    output_dir: '/data1/cgl/tasks'
+
